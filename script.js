@@ -1,6 +1,6 @@
 var arrayNum = [] 
 var num
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < 5; i++) {
     num = Math.floor(Math.random()*9)
     arrayNum.push(num)
 }
@@ -19,9 +19,8 @@ function gioca() {
             punti += 15
             arrayMemoB.push(memo)
         } else {
-           
         }
-    }       
+    }    
     document.getElementById("result").innerHTML = ("i tuoi punti sono" + punti + "</br> I numeri corretti sono" + arrayMemoB)
 }
 

@@ -5,8 +5,24 @@ for (var i = 0; i < 4; i++) {
     arrayNum.push(num)
 }
 alert(" Ricorda i seguenti numeri " + arrayNum)
-var arrayMemo= []
-for (var i = 0; i < arrayNum.length; i++) {
-    var memo = prompt("che numeri hai visto")
-    arrayMemo.push(memo)
+
+setTimeout(gioca , 30000);
+
+function gioca() {
+    var arrayMemo= []
+    var punti = 0
+    var arrayMemoB = []
+    for (var i = 0; i < arrayNum.length; i++) {
+        var memo = prompt("che numeri hai visto")
+        arrayMemo.push(memo)
+        if ( memo === arrayMemo[i]) {
+            punti += 15
+            arrayMemoB.push(memo)
+        } else {
+           
+        }
+    }       
+    document.getElementById("result").innerHTML = ("i tuoi punti sono" + punti + "</br> I numeri corretti sono" + arrayMemoB)
 }
+
+

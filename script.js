@@ -8,7 +8,7 @@ for (var i = 0; i < 5; i++) {
     num = Math.floor(Math.random()*9)
     arrayNum.push(num)
 }
-setTimeout(gioca , 3000);
+setTimeout(gioca , 30000);
 
 function gioca() {
     for (var i = 0; i < arrayNum.length; i++) {

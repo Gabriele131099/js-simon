@@ -4,8 +4,6 @@ for (var i = 0; i < 5; i++) {
     num = Math.floor(Math.random()*9)
     arrayNum.push(num)
 }
-alert(" Ricorda i seguenti numeri " + arrayNum)
-
 setTimeout(gioca , 30000);
 
 function gioca() {
@@ -23,5 +21,6 @@ function gioca() {
     }    
     document.getElementById("result").innerHTML = ("i tuoi punti sono" + punti + "</br> I numeri corretti sono" + arrayMemoB)
 }
+
 
 

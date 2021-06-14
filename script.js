@@ -1,25 +1,24 @@
 var arrayNum = [] 
 var num
 var arrayMemo= []
-var punti = 0
 var arrayMemoB = []
+
 
 for (var i = 0; i < 5; i++) {
     num = Math.floor(Math.random()*9)
     arrayNum.push(num)
 }
-setTimeout(gioca , 30000);
+setTimeout(gioca , 3000);
 
 function gioca() {
-    for (var i = 0; i < arrayNum.length; i++) {
-        var memo = prompt("che numeri hai visto? ")
+    while (arrayNum.length<5) {
+        var punti = 0
+        var memo = parseInt(prompt("che numeri hai visto? "))
         arrayMemo.push(memo)
-        if ( memo == arrayNum[i]) {
+        if (arrayNum.includes(arrayMemo)) {
+            
             punti += 15
-            arrayMemoB.push(memo)
-        } else {
-           
-
+            arrayMemoB.push(memo)          
         }
     }    
     document.getElementById("result").innerHTML = ("I tuoi punti sono: " + punti + "</br> I tuoi numeri  sono: " + arrayMemo + "</br> I numeri corretti sono: " + arrayMemoB + "</br>" + arrayNum) 
